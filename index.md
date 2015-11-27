@@ -13,7 +13,7 @@
 * 博客：http://hanc.cc
 * Github：http://github.com/hanccc
 * 期望职位：PHP开发工程师、后台开发工程师
-* 技能：熟练掌握PHP、JAVA,熟悉Yii、ThinkPHP框架、了解laravel。前端熟练掌握jQuery、ionic框架。了解ElasticSearch、beanstolkd技术。熟悉Linux操作
+* 技能：熟练掌握PHP、JAVA,熟悉Yii、ThinkPHP框架、了解laravel。前端熟练掌握jQuery、ionic框架。了解ElasticSearch、beanstalkd技术。熟悉Linux操作
 
 ##工作经历
 ###常州途游网络科技有限公司 （2015年7月 - 2015年11月）
