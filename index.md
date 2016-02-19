@@ -9,7 +9,7 @@
 * HanSon/男/1994
 * 本科/华南理工大学广州学院软件工程专业
 * 博客：http://hanc.cc &nbsp;&nbsp;&nbsp;&nbsp; Github：http://github.com/hanccc
-* 技能：熟练掌握PHP、JAVA，了解python。前端熟练掌握jQuery、bootstrap。了解ElasticSearch、beanstalkd技术。掌握基本Linux操作。
+* 技能：熟练掌握PHP、JAVA，了解python。前端熟练掌握jQuery、bootstrap。了解ElasticSearch、mongoDB技术。掌握基本Linux操作。熟悉git、SVN工具。有网站以及微信开发经验。
 
 ##工作经历
 ###常州一块去股份有限公司 （2015年7月 - 2015年12月）
@@ -25,26 +25,27 @@
 
 ##项目经历
 
-###计算机协会公众号（公众号名称：华广计协一心）（已完成）
+###计算机协会公众号（公众号名称：华广计协一心）
 * 使用PHP+MySQL+Apache和js-sdk开发
-* 负责公众号的主要功能设想以及担任主要开发者并吸引了8000+用户
+* 负责公众号的主要功能设想以及担任主要开发者并吸引了12000+用户
 * 现功能包含网络管理、教务功能、失物平台、维修预约等
 
-###typecho博客的material主题开发（已完成）
+###typecho博客的material主题开发
 * 使用material的框架实现博客前端页面
 * 主题属性设置开发
 
-###学校师生数据抓取分析（开发中）
+###学校师生数据抓取分析 http://gcu.hanc.cc/data
 * 使用python3.4+mysql进行抓取以及保存数据
 * 能够抓取到学生学院专业性别等信息
 * 通过数据展示学校各种排行榜以及比例信息
 
-###麻将胜率分析（开发中）
-* 通过JAVA实现流程与算法
-* 通过3方已出牌进行概率运算猜测牌
+###基于Spark on yarn的集群运算环境的搭建
+* 通过搭建过程了解Hadoop运行机制
 
-###新浪微博爬虫开发（开发中）
-* 使用python对某些特定用户微博进行抓取
+###麻将胜率分析与AI设计（开发中）
+* 通过JAVA实现流程与算法
+* 通过3方已出牌进行概率运算
+
 
 ##校内实践
 
