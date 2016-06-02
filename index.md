@@ -9,8 +9,8 @@
 
 * 本科：华南理工大学广州学院
 * Experience ：1 年
-* github：<http://github.com/hanccc>
-* blog: <http://hanc.cc>
+* Github：<http://github.com/hanccc>
+* Blog: <http://hanc.cc>
 
 ## 工作经验
 
@@ -36,7 +36,7 @@
 
 ### 项目
 * lunch: 公司点餐系统，laravel + Mysql 开发 <http://lunch.xiyanghui.com>
-* 学校信息数据抓取与分析（非开源）： 使用Python3.4 + mysql进行爬取，并使用echart进行可视化展示
+* 学校信息数据抓取与分析（非开源）： 使用Python3.4 + Mysql，并使用echart进行可视化展示
 * typecho主题：使用material对typecho进行开发 <https://github.com/Hanccc/typecho_material_theme>
 * 校园公众号开发（jxweac): 开发网络管理、教务功能、失物平台、维修预约等功能，现粉丝1W+
 
