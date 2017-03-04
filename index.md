@@ -44,13 +44,13 @@
 
 ### 微信机器人 vbot
 * 利用微信web协议进行抓包解析
-* 能够自定义多种方式操作机器人，实现自动转发，回复，防撤回等功能
+* 能够自定义多种方式操作机器人，实现自动转发，自动回复，防撤回等功能
 * 可通过composer安装
 * 曾获得github trend php排行榜第一
 
 ### 微信公众号开发（微信号：hgjxxg）
 * 使用laravel5.3 + vue2 + easywechat进行微信公众号开发
-* 有饭卡寻回通知、成绩查询、图书查询、
+* 有饭卡寻回通知、成绩查询、图书查询等
 * 负责服务器环境搭建 （PHP7 + MySQL5.7 + redis + nginx1.10）
 * 代码架构设计 （参考 http://oomusou.io/laravel/laravel-architecture/）
 * 负责团队协同方案、产品需求分析、review成员代码、代码编写
