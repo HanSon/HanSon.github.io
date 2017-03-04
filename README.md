@@ -31,17 +31,6 @@
 
 ## 个人项目
 
-### 有赞SDK
-* composer包安装
-* 能够对接有赞商城API
-* 使用pimple容器实现
-
-### Speedy - Laravel 的管理后台包
-* composer包安装
-* 根据命令自动生成管理后台的管理员、角色与权限
-* 根据配置命令生成sidebar菜单栏
-* 前端使用了 vue + bootstrap
-
 ### 微信机器人 vbot
 * 利用微信web协议进行抓包解析
 * 能够自定义多种方式操作机器人，实现自动转发，自动回复，防撤回等功能
@@ -54,6 +43,17 @@
 * 负责服务器环境搭建 （PHP7 + MySQL5.7 + redis + nginx1.10）
 * 代码架构设计 （参考 http://oomusou.io/laravel/laravel-architecture/）
 * 负责团队协同方案、产品需求分析、review成员代码、代码编写
+
+### Speedy - Laravel 的管理后台包
+* composer包安装
+* 根据命令自动生成管理后台的管理员、角色与权限
+* 根据配置命令生成sidebar菜单栏
+* 前端使用了 vue + bootstrap
+
+### 有赞SDK
+* composer包安装
+* 能够对接有赞商城API
+* 使用pimple容器实现
 
 
 ## 校内实践
