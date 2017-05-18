@@ -5,6 +5,10 @@ menu:
   plugins: 插件
   themes: 主题
   search: 搜索
+  test: 测试
+  github: Github
+  blog: 博客
+  phphub: Laravel-China
 
 index:
   get_started: 开始使用

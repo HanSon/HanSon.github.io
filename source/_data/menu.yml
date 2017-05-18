@@ -1,5 +1,6 @@
-docs: /docs/
-api: /api/
-news: /news/
-plugins: /plugins/
-themes: /themes/
+index:
+  github: https://github.com/HanSon
+  blog: http://hanc.cc
+  phphub: https://laravel-china.org/users/4486
+vbot:
+  test: /test/

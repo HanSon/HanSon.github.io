@@ -64,20 +64,36 @@ hexo.extend.helper.register('doc_sidebar', function(className){
   return result;
 });
 
-hexo.extend.helper.register('header_menu', function(className){
-  var menu = this.site.data.menu;
-  var result = '';
-  var self = this;
-  var lang = this.page.lang;
-  var isEnglish = lang === 'en';
+// hexo.extend.helper.register('header_menu', function(className){
+//     var menu = this.site.data.menu;
+//     var result = '';
+//     var self = this;
+//     var lang = this.page.lang;
+//     var isEnglish = lang === 'en';
+//
+//     _.each(menu, function(path, title){
+//         if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
+//
+//         result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
+//     });
+//
+//     return result;
+// });
 
-  _.each(menu, function(path, title){
-    if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
+hexo.extend.helper.register('header_menu', function(className, menu){
+    // var menu = this.site.data.menu.index;
+    // return 'menu';
+    var result = '';
+    var self = this;
+    var lang = this.page.lang;
+    var isEnglish = lang === 'en';
+    _.each(menu, function(path, title){
+        if (!isEnglish && ~localizedPath.indexOf(title)) path = lang + path;
 
-    result += '<a href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
-  });
+        result += '<a target="_blank" href="' + self.url_for(path) + '" class="' + className + '-link">' + self.__('menu.' + title) + '</a>';
+    });
 
-  return result;
+    return result;
 });
 
 hexo.extend.helper.register('canonical_url', function(lang){
@@ -148,8 +164,12 @@ hexo.extend.helper.register('lang_name', function(lang){
 });
 
 hexo.extend.helper.register('disqus_lang', function(){
-  var lang = this.page.lang;
-  var data = this.site.data.languages[lang];
+    var lang = this.page.lang;
+    var data = this.site.data.languages[lang];
 
-  return data.disqus_lang || lang;
+    return data.disqus_lang || lang;
+});
+
+hexo.extend.helper.register('console_log', function(object){
+    console.log(object);
 });

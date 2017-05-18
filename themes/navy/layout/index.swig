@@ -10,15 +10,8 @@
   <div class="wrapper">
     <div class="inner">
       {{ page.content }}
-      <ul id="intro-cmd-wrap">
-        <li class="intro-cmd-item">npm install hexo-cli -g</li>
-        <li class="intro-cmd-item">hexo init blog</li>
-        <li class="intro-cmd-item">cd blog</li>
-        <li class="intro-cmd-item">npm install</li>
-        <li class="intro-cmd-item">hexo server</li>
-      </ul>
       <div id="intro-get-started-wrap">
-        <a href="docs/" id="intro-get-started-link">{{ __('index.get_started') }}</a>
+        <a href="http://hanc.cc" target="_blank" id="intro-get-started-link">我的博客</a>
       </div>
     </div>
   </div>

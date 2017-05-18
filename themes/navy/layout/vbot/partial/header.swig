@@ -4,7 +4,7 @@
       <a href="{{ url_for_lang('') }}" id="logo">Hexo</a>
     </h1>
     <nav id="main-nav">
-      {{ header_menu('main-nav', site.data.menu.index) }}
+      {{ header_menu('main-nav', site.data.menu.vbot) }}
       <a href="https://github.com/{{ config.github }}" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
