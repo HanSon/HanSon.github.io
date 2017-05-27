@@ -16,7 +16,7 @@
         <li class="intro-cmd-item">php example/example.php --session=vbot</li>
       </ul>
       <div id="intro-get-started-wrap">
-        <a href="vbot/docs/" id="intro-get-started-link">{{ __('index.get_started') }}</a>
+        <a href="docs/" id="intro-get-started-link">{{ __('index.get_started') }}</a>
       </div>
     </div>
   </div>
