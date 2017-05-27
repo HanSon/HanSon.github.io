@@ -28,7 +28,7 @@
           </aside>
         </div>
       </article>
-      {{ partial('partial/sidebar') }}
+      {{ partial('vbot/partial/sidebar') }}
     </div>
   </div>
 </div>

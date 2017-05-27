@@ -1,3 +1,3 @@
 <aside id="sidebar" role="navigation">
-  <div class="inner">{{ doc_sidebar('sidebar') }}</div>
+  <div class="inner">{{ sidebar('sidebar', 'vbot_docs') }}</div>
 </aside>

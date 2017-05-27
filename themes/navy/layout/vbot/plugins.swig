@@ -8,7 +8,7 @@
       </header>
       <ul id="plugin-list">
         {% for plugin in _.sortBy(site.data[page.data], 'name') %}
-          {{ partial('partial/' + page.partial, {plugin: plugin}) }}
+          {{ partial('vbot/partial/' + page.partial, {plugin: plugin}) }}
         {% endfor %}
       </ul>
     </div>
