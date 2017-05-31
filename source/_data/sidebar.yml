@@ -5,6 +5,7 @@ vbot_docs:
     theory: theory.html
     configuration: configuration.html
     catalog: catalog.html
+    run: run.html
   base_usage:
     message_handler: messagehandler.html
     observer: observer.html

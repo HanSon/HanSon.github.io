@@ -1,4 +1,4 @@
-title: Hexo
+title: HanSon's 创作空间
 subtitle: "A fast, simple & powerful blog framework powered by Node.js."
 description: "Hexo is a fast, simple & powerful blog framework powered by Node.js."
 author: Tommy Chen
@@ -23,7 +23,6 @@ deploy:
   repo: git@github.com:hanson/hanson.github.io.git
 
 disqus_shortname: hexojs
-google_analytics: UA-4910098-10
 fb_admins: 100000247608790
 algolia:
   en:

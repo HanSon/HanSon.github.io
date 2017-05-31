@@ -28,6 +28,7 @@ sidebar:
     install: 安装
     theory: 原理
     catalog: 目录
+    run: 运行
     configuration: 配置
     base_usage: 基本使用
     advance_usage: 高级使用
