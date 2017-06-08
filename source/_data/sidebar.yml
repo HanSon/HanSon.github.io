@@ -32,6 +32,8 @@ vbot_docs:
     newfriend: newfriend.html
     groupchange: groupchange.html
     mina: mina.html
+  other:
+    troubleshooting: troubleshooting.html
 
 api:
   core:

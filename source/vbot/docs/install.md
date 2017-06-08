@@ -15,22 +15,16 @@ layout: vbot/page
 
 ### 安装前提
 
-安装 Vbot 相当简单。然而在安装前，你必须检查电脑中是否已安装下列应用程序：
+安装 Vbot 相当简单。然而在安装前，你必须检查电脑中是否已安装 composer：
 
 - [Composer](https://laravel-china.org/topics/4484/composer-mirror-use-help)
-- [Git](http://git-scm.com/)
-
-安装其一后，使用 git 或者 composer 即可完成 Vbot 的安装。
 
 ### 安装方式
 
-###### composer（推荐）
+###### composer
 ``` bash
-composer require hanson/vbot
-```
-
-###### git
-``` bash
-git clone https://github.com/HanSon/vbot.git
+mkdir vbot
+cd vbot
+composer require "hanson/vbot:v2.0-rc6"
 ```
 

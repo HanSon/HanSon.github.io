@@ -15,7 +15,7 @@ use Illuminate\Support\Collection;
 $vbot = new Vbot($config);
 
 // 获取监听器实例
-$messageHandler = $vbot->observer;
+$observer = $vbot->observer;
 ```
 
 ### API列表

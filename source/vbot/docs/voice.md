@@ -33,7 +33,7 @@ $vbot->messageHandler->setHandler(function(Collection $message){
 ```php
 $vbot->messageHandler->setHandler(function(Collection $message){
     // ...
-    if ($message['type'] === 'image') {
+    if ($message['type'] === 'voice') {
         // 下载语音至默认路径
         Voice::download($message);
         // 下载语音到自定义路径或自定义处理

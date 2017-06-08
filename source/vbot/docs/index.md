@@ -10,6 +10,8 @@ Vbot 是一个基于 web 的 php 7 微信机器人。你还可以通过开启 Sw
 
 ## Vbot 能做什么？
 
+**微信网页端能实现的，Vbot 都能实现**
+
 - 群管理
 - 自动回复
 - 数据统计
@@ -20,7 +22,7 @@ Vbot 是一个基于 web 的 php 7 微信机器人。你还可以通过开启 Sw
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=299c1cf53a21a6a699449c00e29ab0142e7d402726e46f174e6e31940e95242e"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Vbot交流群" title="Vbot交流群"></a>
 
-QQ群号：492548647
+QQ群号：492548647 加群验证请输入vbot的编程语言（为了照顾看不到验证问题的 Mac 同学）
 
 {% note warn 进群须知 %}
 为了珍惜自己与他人的时间，提问前请确保已认真阅读全部文档，否则按伸手程度禁言。
@@ -34,6 +36,7 @@ QQ群号：492548647
 
 - 有人用过 Vbot 吗？
 - 有人成功过吗？
+- 能不能实现****？
 - 报错了怎么办？（让大家猜问题）
 - 能不能不用composer？
 - 有待补充 ... 
