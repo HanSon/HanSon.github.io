@@ -22,10 +22,12 @@ Vbot 是一个基于 web 的 php 7 微信机器人。你还可以通过开启 Sw
 
 <a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=299c1cf53a21a6a699449c00e29ab0142e7d402726e46f174e6e31940e95242e"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Vbot交流群" title="Vbot交流群"></a>
 
-QQ群号：492548647 加群验证请输入vbot的编程语言（为了照顾看不到验证问题的 Mac 同学）
+QQ群号：492548647 
 
 {% note warn 进群须知 %}
-为了珍惜自己与他人的时间，提问前请确保已认真阅读全部文档，否则按伸手程度禁言。
+为了保证进群用户都清楚知道文档链接，故此把 QQ 群放在文档位置，加群需要缴纳 1 元群费，望理解。
+
+为了珍惜自己与他人的时间，提问前请确保已认真阅读全部文档。
 
 开始之前请确保你已掌握基础的 PHP 技能，如果连基础的 composer 等知识都不会，建议你学会了再来。
 {% endnote %}

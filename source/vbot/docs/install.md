@@ -25,6 +25,6 @@ layout: vbot/page
 ``` bash
 mkdir vbot
 cd vbot
-composer require "hanson/vbot:v2.0-rc6"
+composer require hanson/vbot
 ```
 

@@ -1,8 +1,8 @@
 vbot_docs:
   getting_started:
     overview: index.html
-    install: install.html
     theory: theory.html
+    install: install.html
     configuration: configuration.html
     catalog: catalog.html
     run: run.html
@@ -10,8 +10,10 @@ vbot_docs:
     message_handler: messagehandler.html
     observer: observer.html
     contacts: contacts.html
+    extension: extension.html
   advance_usage:
     api: api.html
+    extension_develop: extensiondevelop.html
   message:
     message: message.html
     text: text.html

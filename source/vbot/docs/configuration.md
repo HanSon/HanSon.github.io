@@ -78,15 +78,16 @@ return [
             ],
         ],
     ],
-    'database' => [
-        'redis' => [
-            'client'  => 'predis',
-            'default' => [
-                'host'     => '127.0.0.1',
-                'password' => null,
-                'port'     => 6379,
-                'database' => 0,
-            ],
+    /*
+     * 拓展配置
+     * ==============================
+     * 如果加载拓展则必须加载此配置项
+     */
+    'extension' => [
+        // 管理员配置（必选），优先加载 remark_name
+        'admin' => [
+            'remark'   => '',
+            'nickname' => '',
         ],
     ],
 ];
