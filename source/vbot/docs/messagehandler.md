@@ -25,7 +25,21 @@ $vbot = new Vbot($config);
 // 获取消息处理器实例
 $messageHandler = $vbot->messageHandler;
 
+// 收到消息时触发
 $messageHandler->setHandler(function(Collection $message){
     Text::send($message['from']['UserName'], 'Hi! I'm Vbot');
 });
+
+// 一直触发
+$messageHandler->setCustomHandler(function(){
+    if (date('H') == 12) {
+        Text::send('filehelper', '12 点');
+    }
+});
 ```
+
+### setHandler Vs setCustomHandler
+
+setHandler 为收到消息时触发
+
+setCustomHandler 为当 Vbot 向微信服务器请求查询是否有最新消息时，无论是否有新消息都会触发，触发周期最长为 35 秒一次。
