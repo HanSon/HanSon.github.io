@@ -16,6 +16,8 @@ $vbot = new Vbot($config);
 $vbot->messageHandler->setHandler(function(Collection $message){
     Text::send($message['from']['UserName'], 'hi');
 });
+
+$vbot->server->serve();
 ```
 
 具体配置如下：
@@ -84,11 +86,12 @@ return [
      * 如果加载拓展则必须加载此配置项
      */
     'extension' => [
-        // 管理员配置（必选），优先加载 remark_name
+        // 管理员配置（必选），优先加载 remark(备注名)
         'admin' => [
             'remark'   => '',
             'nickname' => '',
         ],
+        // 'other extension' => [ ... ],
     ],
 ];
 

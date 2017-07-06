@@ -19,7 +19,7 @@ composer require hanson/vbot
 ```php
 # run.php
 
-require_once __DIR__.'/vendor/autoload.php'
+require_once __DIR__.'/vendor/autoload.php';
 
 $path = __DIR__.'/tmp/';
 
@@ -93,7 +93,7 @@ $options = [
 $vbot = new Hanson\Vbot\Foundation\Vbot($options);
 
 $vbot->messageHandler->setHandler(function ($message) {
-    Text::send($message['from']['UserName'], 'Hi, I'm Vbot!');
+    Hanson\Vbot\Message\Text::send($message['from']['UserName'], 'Hi, I\'m Vbot!');
 });
 
 $vbot->server->serve();
@@ -106,5 +106,7 @@ $vbot->server->serve();
 ```php
 php run.php --session=vbot
 ```
+
+或者你可以直接参考当前 Vbot 正在运行的例子： https://github.com/HanSon/my-vbot
 
 PS:如果没有出现二维码请查看 terminal 的 ANSI color 设置

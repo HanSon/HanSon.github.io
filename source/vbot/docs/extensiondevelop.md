@@ -44,6 +44,7 @@ layout: vbot/page
 - zhName 扩展的中文名称
 - author 作者名称
 - version 版本号，默认为 1.0 （以后需跟随 github release 版本做变动）
+- `public static $status = true;` 负责扩展开关（新增加）
 
 #### 方法
 
