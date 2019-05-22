@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>监听器 | HanSon's 创作空间</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://create.hanc.cc/vbot/docs/observer.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="HanSon's 创作空间">
+  <!-- Open Graph -->
+  <meta name="description" content="在 Vbot 运行的每个阶段，都会触发一个监听器，你可以选择是否进行某些个性化的处理。 获取实例:use Hanson\Vbot\Foundation\Vbot;use Illuminate\Support\Collection;// ...$vbot = new Vbot($config);// 获取监听器实例$observer = $vbot-&amp;gt;observer; API列表二维码监听器">
+<meta property="og:type" content="website">
+<meta property="og:title" content="监听器">
+<meta property="og:url" content="http://create.hanc.cc/vbot/docs/observer.html">
+<meta property="og:site_name" content="HanSon&#39;s 创作空间">
+<meta property="og:description" content="在 Vbot 运行的每个阶段，都会触发一个监听器，你可以选择是否进行某些个性化的处理。 获取实例:use Hanson\Vbot\Foundation\Vbot;use Illuminate\Support\Collection;// ...$vbot = new Vbot($config);// 获取监听器实例$observer = $vbot-&amp;gt;observer; API列表二维码监听器">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-22T04:02:18.239Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="监听器">
+<meta name="twitter:description" content="在 Vbot 运行的每个阶段，都会触发一个监听器，你可以选择是否进行某些个性化的处理。 获取实例:use Hanson\Vbot\Foundation\Vbot;use Illuminate\Support\Collection;// ...$vbot = new Vbot($config);// 获取监听器实例$observer = $vbot-&amp;gt;observer; API列表二维码监听器">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a target="_blank" href="/vbot/docs/" class="main-nav-link">文档</a><a target="_blank" href="https://github.com/phpvbot" class="main-nav-link">扩展</a><a target="_blank" href="https://github.com/hanson/vbot" class="main-nav-link">Github</a>
+      <a href="https://github.com/hanson" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical>
+        
+          <option value="en" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">监听器</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/vbot/docs/observer.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>在 Vbot 运行的每个阶段，都会触发一个监听器，你可以选择是否进行某些个性化的处理。</p>
+<h3 id="获取实例" class="article-heading"><a href="#获取实例" class="headerlink" title="获取实例:"></a>获取实例:<a class="article-anchor" href="#获取实例" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">Hanson</span>\<span class="title">Vbot</span>\<span class="title">Foundation</span>\<span class="title">Vbot</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">Illuminate</span>\<span class="title">Support</span>\<span class="title">Collection</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">$vbot = <span class="keyword">new</span> Vbot($config);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取监听器实例</span></span><br><span class="line">$observer = $vbot-&gt;observer;</span><br></pre></td></tr></table></figure>
+<h3 id="API列表" class="article-heading"><a href="#API列表" class="headerlink" title="API列表"></a>API列表<a class="article-anchor" href="#API列表" aria-hidden="true"></a></h3><h5 id="二维码监听器" class="article-heading"><a href="#二维码监听器" class="headerlink" title="二维码监听器"></a>二维码监听器<a class="article-anchor" href="#二维码监听器" aria-hidden="true"></a></h5><p>在登录时会出现二维码需要扫码登录。而这个二维码链接也将传到二维码监听器中。<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setQrCodeObserver(<span class="function"><span class="keyword">function</span><span class="params">($qrCodeUrl)</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="登录成功监听器" class="article-heading"><a href="#登录成功监听器" class="headerlink" title="登录成功监听器"></a>登录成功监听器<a class="article-anchor" href="#登录成功监听器" aria-hidden="true"></a></h5><p>登录成功时回调。无论是第一次登录还是免扫码登录均会触发。<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setLoginSuccessObserver(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="免扫码成功监听器" class="article-heading"><a href="#免扫码成功监听器" class="headerlink" title="免扫码成功监听器"></a>免扫码成功监听器<a class="article-anchor" href="#免扫码成功监听器" aria-hidden="true"></a></h5><p>免扫码登录成功时回调。<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setReLoginSuccessObserver(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="程序退出监听器" class="article-heading"><a href="#程序退出监听器" class="headerlink" title="程序退出监听器"></a>程序退出监听器<a class="article-anchor" href="#程序退出监听器" aria-hidden="true"></a></h5><p>程序退出时回调。<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setExitObserver(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="好友监听器" class="article-heading"><a href="#好友监听器" class="headerlink" title="好友监听器"></a>好友监听器<a class="article-anchor" href="#好友监听器" aria-hidden="true"></a></h5><p>此回调仅在初始化好友时执行。</p>
+<p>变量 $contacts 含有数组下表 ‘friends’,’groups’,’officials’,’special’,’members’<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setFetchContactObserver(<span class="function"><span class="keyword">function</span><span class="params">(array $contacts)</span></span>&#123;</span><br><span class="line">    print_r($contacts[<span class="string">'friends'</span>]);</span><br><span class="line">    print_r($contacts[<span class="string">'groups'</span>]);</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="消息处理前监听器" class="article-heading"><a href="#消息处理前监听器" class="headerlink" title="消息处理前监听器"></a>消息处理前监听器<a class="article-anchor" href="#消息处理前监听器" aria-hidden="true"></a></h5><p>接收消息前回调。<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setBeforeMessageObserver(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h5 id="异常监听器" class="article-heading"><a href="#异常监听器" class="headerlink" title="异常监听器"></a>异常监听器<a class="article-anchor" href="#异常监听器" aria-hidden="true"></a></h5><p>当接收消息异常时，当系统判断为太久没从手机端打开微信时，则急需打开，时间过久将断开。<br><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$observer-&gt;setNeedActivateObserver(<span class="function"><span class="keyword">function</span><span class="params">()</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-05-22T04:02:18.239Z" itemprop="dateModified">上次更新：2019-05-22</time>
+                
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'http://create.hanc.cc/vbot/docs/observer.html';
+  var disqus_title = "监听器";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#获取实例"><span class="toc-text">获取实例:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#API列表"><span class="toc-text">API列表</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#二维码监听器"><span class="toc-text">二维码监听器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#登录成功监听器"><span class="toc-text">登录成功监听器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#免扫码成功监听器"><span class="toc-text">免扫码成功监听器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#程序退出监听器"><span class="toc-text">程序退出监听器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#好友监听器"><span class="toc-text">好友监听器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#消息处理前监听器"><span class="toc-text">消息处理前监听器</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#异常监听器"><span class="toc-text">异常监听器</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="theory.html" class="sidebar-link">原理</a><a href="install.html" class="sidebar-link">安装</a><a href="configuration.html" class="sidebar-link">配置</a><a href="catalog.html" class="sidebar-link">目录</a><a href="run.html" class="sidebar-link">运行</a><strong class="sidebar-title">基本使用</strong><a href="messagehandler.html" class="sidebar-link">消息处理器</a><a href="observer.html" class="sidebar-link current">监听器</a><a href="contacts.html" class="sidebar-link">联系人</a><a href="extension.html" class="sidebar-link">扩展</a><strong class="sidebar-title">高级使用</strong><a href="api.html" class="sidebar-link">Swoole API</a><a href="extensiondevelop.html" class="sidebar-link">扩展开发</a><strong class="sidebar-title">消息</strong><a href="message.html" class="sidebar-link">消息</a><a href="text.html" class="sidebar-link">文本</a><a href="voice.html" class="sidebar-link">语音</a><a href="image.html" class="sidebar-link">图片</a><a href="video.html" class="sidebar-link">视频</a><a href="emoticon.html" class="sidebar-link">表情</a><a href="file.html" class="sidebar-link">文件</a><a href="location.html" class="sidebar-link">位置</a><a href="recall.html" class="sidebar-link">撤回</a><a href="card.html" class="sidebar-link">名片</a><a href="redpacket.html" class="sidebar-link">红包</a><a href="requestfriend.html" class="sidebar-link">好友请求</a><a href="share.html" class="sidebar-link">分享</a><a href="official.html" class="sidebar-link">公众号</a><a href="touch.html" class="sidebar-link">点击</a><a href="transfer.html" class="sidebar-link">转账</a><a href="newfriend.html" class="sidebar-link">新增好友</a><a href="groupchange.html" class="sidebar-link">群组变动</a><a href="mina.html" class="sidebar-link">小程序</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://zespia.tw/" target="_blank">Tommy Chen</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hanson" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hanson" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical>
+      
+        <option value="en" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/scrollingelement.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'c3d5d4c995b5e0c2ffb5623900279a66',
+  indexName: 'hexo',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>

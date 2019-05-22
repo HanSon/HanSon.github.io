@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>消息 | HanSon's 创作空间</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://create.hanc.cc/vbot/docs/message.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="HanSon's 创作空间">
+  <!-- Open Graph -->
+  <meta name="description" content="Vbot 的内置处理使消息变得多种多样，也更便于程序的灵活处理。 所有消息类都继承于 Illuminate\Support\Collection，Collection 实现了 ArrayAccess 接口，你把消息当成数组即可，取出属性时只需把属性名称当作数组下标 如何获取属性值？。 每种消息都可能含有各自独特的属性，但它们都含有基础属性。 每次接受到的消息都会存入缓存中，两分钟后过期，方便取出撤">
+<meta property="og:type" content="website">
+<meta property="og:title" content="消息">
+<meta property="og:url" content="http://create.hanc.cc/vbot/docs/message.html">
+<meta property="og:site_name" content="HanSon&#39;s 创作空间">
+<meta property="og:description" content="Vbot 的内置处理使消息变得多种多样，也更便于程序的灵活处理。 所有消息类都继承于 Illuminate\Support\Collection，Collection 实现了 ArrayAccess 接口，你把消息当成数组即可，取出属性时只需把属性名称当作数组下标 如何获取属性值？。 每种消息都可能含有各自独特的属性，但它们都含有基础属性。 每次接受到的消息都会存入缓存中，两分钟后过期，方便取出撤">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-05-22T04:02:18.234Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="消息">
+<meta name="twitter:description" content="Vbot 的内置处理使消息变得多种多样，也更便于程序的灵活处理。 所有消息类都继承于 Illuminate\Support\Collection，Collection 实现了 ArrayAccess 接口，你把消息当成数组即可，取出属性时只需把属性名称当作数组下标 如何获取属性值？。 每种消息都可能含有各自独特的属性，但它们都含有基础属性。 每次接受到的消息都会存入缓存中，两分钟后过期，方便取出撤">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a target="_blank" href="/vbot/docs/" class="main-nav-link">文档</a><a target="_blank" href="https://github.com/phpvbot" class="main-nav-link">扩展</a><a target="_blank" href="https://github.com/hanson/vbot" class="main-nav-link">Github</a>
+      <a href="https://github.com/hanson" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical>
+        
+          <option value="en" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">消息</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/vbot/docs/message.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>Vbot 的内置处理使消息变得多种多样，也更便于程序的灵活处理。</p>
+<p>所有消息类都继承于 Illuminate\Support\Collection，Collection 实现了 ArrayAccess 接口，你把消息当成数组即可，取出属性时只需把属性名称当作数组下标 <a href="#如何获取属性值？">如何获取属性值？</a>。</p>
+<p>每种消息都可能含有各自独特的属性，但它们都含有<a href="#基础属性">基础属性</a>。</p>
+<blockquote class="note undefined"><p>每次接受到的消息都会存入缓存中，两分钟后过期，方便取出撤回消息。</p>
+</blockquote>
+<h3 id="基础属性" class="article-heading"><a href="#基础属性" class="headerlink" title="基础属性"></a>基础属性<a class="article-anchor" href="#基础属性" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>string</td>
+<td>消息类型（每种消息都对应一个 type 类型）</td>
+</tr>
+<tr>
+<td>from</td>
+<td>array</td>
+<td>消息来源</td>
+</tr>
+<tr>
+<td>sender</td>
+<td>array</td>
+<td>群消息发送者</td>
+</tr>
+<tr>
+<td>content</td>
+<td>string</td>
+<td>经过处理显示在控制台的消息</td>
+</tr>
+<tr>
+<td>message</td>
+<td>string</td>
+<td>转格式后的消息</td>
+</tr>
+<tr>
+<td>time</td>
+<td>Carbon</td>
+<td>发送时间</td>
+</tr>
+<tr>
+<td>fromType</td>
+<td>string</td>
+<td>消息发送者类型</td>
+</tr>
+<tr>
+<td>raw</td>
+<td>array</td>
+<td>消息原始数据（完全不经处理的原始数据）</td>
+</tr>
+</tbody>
+</table>
+<h5 id="message-vs-content-vs-raw" class="article-heading"><a href="#message-vs-content-vs-raw" class="headerlink" title="message vs content vs raw ?"></a>message vs content vs raw ?<a class="article-anchor" href="#message-vs-content-vs-raw" aria-hidden="true"></a></h5><ul>
+<li>raw. 是微信返回的原始数据，其中夹杂着大量无用的数据， Vbot 在处理 raw 时会取出有用的数据作为消息的属性</li>
+<li>message. message 是经过 raw 处理而来的，例如对 <br>标签、XML 的转移</li>
+<li>content. content 是为了处理不便于在控制台展示的数据。如 [表情] [视频] [分享] 等等</li>
+</ul>
+<h5 id="fromType" class="article-heading"><a href="#fromType" class="headerlink" title="fromType"></a>fromType<a class="article-anchor" href="#fromType" aria-hidden="true"></a></h5><p>消息发送者的类型</p>
+<ul>
+<li>System 系统消息</li>
+<li>Self 自己发送的消息</li>
+<li>Group 群组消息</li>
+<li>Contact 联系人消息</li>
+<li>Official 公众号消息</li>
+<li>Special 特殊账号消息</li>
+<li>Unknown 未知消息</li>
+</ul>
+<h5 id="from-amp-sender" class="article-heading"><a href="#from-amp-sender" class="headerlink" title="from &amp; sender"></a>from &amp; sender<a class="article-anchor" href="#from-amp-sender" aria-hidden="true"></a></h5><p>这个结构可参考 <a href="friends.html">好友</a> 以及 <a href="members.html">群成员</a></p>
+<h5 id="如何获取属性值？" class="article-heading"><a href="#如何获取属性值？" class="headerlink" title="如何获取属性值？"></a>如何获取属性值？<a class="article-anchor" href="#如何获取属性值？" aria-hidden="true"></a></h5><p>举例：</p>
+<ul>
+<li>消息类型： <code>$message[&#39;type&#39;]</code></li>
+<li>消息来源昵称： <code>$message[&#39;from&#39;][&#39;NickName&#39;]</code> (更多详情可查阅 <a href="contacts.html">联系人</a>)</li>
+</ul>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-05-22T04:02:18.234Z" itemprop="dateModified">上次更新：2019-05-22</time>
+                
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'http://create.hanc.cc/vbot/docs/message.html';
+  var disqus_title = "消息";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础属性"><span class="toc-text">基础属性</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#message-vs-content-vs-raw"><span class="toc-text">message vs content vs raw ?</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#fromType"><span class="toc-text">fromType</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#from-amp-sender"><span class="toc-text">from &amp; sender</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何获取属性值？"><span class="toc-text">如何获取属性值？</span></a></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="theory.html" class="sidebar-link">原理</a><a href="install.html" class="sidebar-link">安装</a><a href="configuration.html" class="sidebar-link">配置</a><a href="catalog.html" class="sidebar-link">目录</a><a href="run.html" class="sidebar-link">运行</a><strong class="sidebar-title">基本使用</strong><a href="messagehandler.html" class="sidebar-link">消息处理器</a><a href="observer.html" class="sidebar-link">监听器</a><a href="contacts.html" class="sidebar-link">联系人</a><a href="extension.html" class="sidebar-link">扩展</a><strong class="sidebar-title">高级使用</strong><a href="api.html" class="sidebar-link">Swoole API</a><a href="extensiondevelop.html" class="sidebar-link">扩展开发</a><strong class="sidebar-title">消息</strong><a href="message.html" class="sidebar-link current">消息</a><a href="text.html" class="sidebar-link">文本</a><a href="voice.html" class="sidebar-link">语音</a><a href="image.html" class="sidebar-link">图片</a><a href="video.html" class="sidebar-link">视频</a><a href="emoticon.html" class="sidebar-link">表情</a><a href="file.html" class="sidebar-link">文件</a><a href="location.html" class="sidebar-link">位置</a><a href="recall.html" class="sidebar-link">撤回</a><a href="card.html" class="sidebar-link">名片</a><a href="redpacket.html" class="sidebar-link">红包</a><a href="requestfriend.html" class="sidebar-link">好友请求</a><a href="share.html" class="sidebar-link">分享</a><a href="official.html" class="sidebar-link">公众号</a><a href="touch.html" class="sidebar-link">点击</a><a href="transfer.html" class="sidebar-link">转账</a><a href="newfriend.html" class="sidebar-link">新增好友</a><a href="groupchange.html" class="sidebar-link">群组变动</a><a href="mina.html" class="sidebar-link">小程序</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://zespia.tw/" target="_blank">Tommy Chen</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hanson" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hanson" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical>
+      
+        <option value="en" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/scrollingelement.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'c3d5d4c995b5e0c2ffb5623900279a66',
+  indexName: 'hexo',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>扩展 | HanSon's 创作空间</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://create.hanc.cc/vbot/docs/extension.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="HanSon's 创作空间">
+  <!-- Open Graph -->
+  <meta name="description" content="在新版本 2.0.1 开始，Vbot 开始以扩展的形式去增加业务上的处理，也让开发者们更加简单方便的去扩展自己的机器人功能 什么是扩展？扩展是为了方便 Vbot 的使用者能够更加得心应手的增加一些业务上的功能，通过监听消息去实现不同的业务功能代码，并且以扩展的形式能够非常轻松的进行引入、安装。 扩展的分类扩展分为官方扩展以及第三方扩展 官方扩展是指由官方人员经过审核、建议、测试后，功能正常、内容健">
+<meta property="og:type" content="website">
+<meta property="og:title" content="扩展">
+<meta property="og:url" content="http://create.hanc.cc/vbot/docs/extension.html">
+<meta property="og:site_name" content="HanSon&#39;s 创作空间">
+<meta property="og:description" content="在新版本 2.0.1 开始，Vbot 开始以扩展的形式去增加业务上的处理，也让开发者们更加简单方便的去扩展自己的机器人功能 什么是扩展？扩展是为了方便 Vbot 的使用者能够更加得心应手的增加一些业务上的功能，通过监听消息去实现不同的业务功能代码，并且以扩展的形式能够非常轻松的进行引入、安装。 扩展的分类扩展分为官方扩展以及第三方扩展 官方扩展是指由官方人员经过审核、建议、测试后，功能正常、内容健">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/8n7fO95MlX.png">
+<meta property="og:updated_time" content="2019-05-22T04:02:18.225Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="扩展">
+<meta name="twitter:description" content="在新版本 2.0.1 开始，Vbot 开始以扩展的形式去增加业务上的处理，也让开发者们更加简单方便的去扩展自己的机器人功能 什么是扩展？扩展是为了方便 Vbot 的使用者能够更加得心应手的增加一些业务上的功能，通过监听消息去实现不同的业务功能代码，并且以扩展的形式能够非常轻松的进行引入、安装。 扩展的分类扩展分为官方扩展以及第三方扩展 官方扩展是指由官方人员经过审核、建议、测试后，功能正常、内容健">
+<meta name="twitter:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/8n7fO95MlX.png">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a target="_blank" href="/vbot/docs/" class="main-nav-link">文档</a><a target="_blank" href="https://github.com/phpvbot" class="main-nav-link">扩展</a><a target="_blank" href="https://github.com/hanson/vbot" class="main-nav-link">Github</a>
+      <a href="https://github.com/hanson" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical>
+        
+          <option value="en" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">扩展</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/vbot/docs/extension.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>在新版本 2.0.1 开始，Vbot 开始以扩展的形式去增加业务上的处理，也让开发者们更加简单方便的去扩展自己的机器人功能</p>
+<h2 id="什么是扩展？" class="article-heading"><a href="#什么是扩展？" class="headerlink" title="什么是扩展？"></a>什么是扩展？<a class="article-anchor" href="#什么是扩展？" aria-hidden="true"></a></h2><p>扩展是为了方便 Vbot 的使用者能够更加得心应手的增加一些业务上的功能，通过监听消息去实现不同的业务功能代码，并且以扩展的形式能够非常轻松的进行引入、安装。</p>
+<h2 id="扩展的分类" class="article-heading"><a href="#扩展的分类" class="headerlink" title="扩展的分类"></a>扩展的分类<a class="article-anchor" href="#扩展的分类" aria-hidden="true"></a></h2><p>扩展分为官方扩展以及第三方扩展</p>
+<p>官方扩展是指由官方人员经过审核、建议、测试后，功能正常、内容健康，并且经过开发者同意后并入官方扩展，安装官方扩展会有绝对的保障。</p>
+<p>第三方扩展是指开发者自行开发，并没有经过官方审核的一些扩展。</p>
+<p>简单来说，官方扩展就相当于 Google play， Apple store 里面的应用。</p>
+<p>所有官方扩展都会在 github 中： <a href="https://github.com/phpvbot" target="_blank" rel="noopener">https://github.com/phpvbot</a> (请确保你要安装的扩展已经有release版本号，不然则为开发中) </p>
+<h3 id="配置" class="article-heading"><a href="#配置" class="headerlink" title="配置"></a>配置<a class="article-anchor" href="#配置" aria-hidden="true"></a></h3><p>在配置项，新增加了 extension 作为扩展的配置，消息扩展需要填写一个</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">$config = [</span><br><span class="line">    <span class="string">'log'</span>      =&gt; ...</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">     * 拓展配置</span></span><br><span class="line"><span class="comment">     * ==============================</span></span><br><span class="line"><span class="comment">     * 如果加载拓展则必须加载此配置项</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="string">'extension'</span> =&gt; [</span><br><span class="line">        <span class="comment">// 管理员配置（必选），优先加载 remark_name</span></span><br><span class="line">        <span class="string">'admin'</span> =&gt; [</span><br><span class="line">            <span class="string">'remark'</span>   =&gt; <span class="string">''</span>,</span><br><span class="line">            <span class="string">'nickname'</span> =&gt; <span class="string">''</span>,</span><br><span class="line">        ],</span><br><span class="line">    ],</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+<p>每个扩展都需要加载一个用户作为管理员，可以根据填写的 备注 或者 昵称 进行搜索，备注优先。 </p>
+<h3 id="使用" class="article-heading"><a href="#使用" class="headerlink" title="使用"></a>使用<a class="article-anchor" href="#使用" aria-hidden="true"></a></h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="title">Hanson</span>\<span class="title">Vbot</span>\<span class="title">Foundation</span>\<span class="title">Vbot</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// $option = [];</span></span><br><span class="line"></span><br><span class="line">$vbot = <span class="keyword">new</span> Vbot($option);</span><br><span class="line"></span><br><span class="line">$vbot-&gt;messageExtension-&gt;load([</span><br><span class="line">    <span class="comment">// some extensions</span></span><br><span class="line">]);</span><br><span class="line"></span><br><span class="line">$vbot-&gt;server-&gt;serve();</span><br></pre></td></tr></table></figure>
+<p><code>$vbot-&gt;messageExtension-&gt;load()</code> 负责接收一个扩展的数组</p>
+<h3 id="例子" class="article-heading"><a href="#例子" class="headerlink" title="例子"></a>例子<a class="article-anchor" href="#例子" aria-hidden="true"></a></h3><p>我们用 guess-number 来举例</p>
+<p>先在 vbot 根目录上进行安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">composer require vbot/guess-number</span><br></pre></td></tr></table></figure>
+<p>安装完毕后使用实例去读取</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">use Vbot\GuessNumber\GuessNumber;</span><br><span class="line"></span><br><span class="line">$vbot-&gt;messageExtension-&gt;load([</span><br><span class="line">    GuessNumber::class,</span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<h3 id="指令" class="article-heading"><a href="#指令" class="headerlink" title="指令"></a>指令<a class="article-anchor" href="#指令" aria-hidden="true"></a></h3><p>指令是指 <strong>扩展管理员</strong>或者<strong>机器人本身</strong> 在对机器人所在的群发送相关的指令消息，机器人会返回一定的信息或操作</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/8n7fO95MlX.png" alt="file"></p>
+<p>每个扩展都有一个英文的名称，如 猜数字 的名称为 <code>guess_number</code></p>
+<p>以下指令用 <code>extension</code> 代替，具体需根据每个扩展的名称进行发送</p>
+<h4 id="查询扩展状态" class="article-heading"><a href="#查询扩展状态" class="headerlink" title="查询扩展状态"></a>查询扩展状态<a class="article-anchor" href="#查询扩展状态" aria-hidden="true"></a></h4><p><code>extension info</code></p>
+<h4 id="更改扩展状态" class="article-heading"><a href="#更改扩展状态" class="headerlink" title="更改扩展状态"></a>更改扩展状态<a class="article-anchor" href="#更改扩展状态" aria-hidden="true"></a></h4><p><code>extension on/off</code></p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-05-22T04:02:18.225Z" itemprop="dateModified">上次更新：2019-05-22</time>
+                
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'http://create.hanc.cc/vbot/docs/extension.html';
+  var disqus_title = "扩展";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#什么是扩展？"><span class="toc-text">什么是扩展？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#扩展的分类"><span class="toc-text">扩展的分类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#配置"><span class="toc-text">配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用"><span class="toc-text">使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#例子"><span class="toc-text">例子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指令"><span class="toc-text">指令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#查询扩展状态"><span class="toc-text">查询扩展状态</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更改扩展状态"><span class="toc-text">更改扩展状态</span></a></li></ol></li></ol></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="theory.html" class="sidebar-link">原理</a><a href="install.html" class="sidebar-link">安装</a><a href="configuration.html" class="sidebar-link">配置</a><a href="catalog.html" class="sidebar-link">目录</a><a href="run.html" class="sidebar-link">运行</a><strong class="sidebar-title">基本使用</strong><a href="messagehandler.html" class="sidebar-link">消息处理器</a><a href="observer.html" class="sidebar-link">监听器</a><a href="contacts.html" class="sidebar-link">联系人</a><a href="extension.html" class="sidebar-link current">扩展</a><strong class="sidebar-title">高级使用</strong><a href="api.html" class="sidebar-link">Swoole API</a><a href="extensiondevelop.html" class="sidebar-link">扩展开发</a><strong class="sidebar-title">消息</strong><a href="message.html" class="sidebar-link">消息</a><a href="text.html" class="sidebar-link">文本</a><a href="voice.html" class="sidebar-link">语音</a><a href="image.html" class="sidebar-link">图片</a><a href="video.html" class="sidebar-link">视频</a><a href="emoticon.html" class="sidebar-link">表情</a><a href="file.html" class="sidebar-link">文件</a><a href="location.html" class="sidebar-link">位置</a><a href="recall.html" class="sidebar-link">撤回</a><a href="card.html" class="sidebar-link">名片</a><a href="redpacket.html" class="sidebar-link">红包</a><a href="requestfriend.html" class="sidebar-link">好友请求</a><a href="share.html" class="sidebar-link">分享</a><a href="official.html" class="sidebar-link">公众号</a><a href="touch.html" class="sidebar-link">点击</a><a href="transfer.html" class="sidebar-link">转账</a><a href="newfriend.html" class="sidebar-link">新增好友</a><a href="groupchange.html" class="sidebar-link">群组变动</a><a href="mina.html" class="sidebar-link">小程序</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://zespia.tw/" target="_blank">Tommy Chen</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hanson" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hanson" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical>
+      
+        <option value="en" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/scrollingelement.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'c3d5d4c995b5e0c2ffb5623900279a66',
+  indexName: 'hexo',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#"><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <title>扩展开发 | HanSon's 创作空间</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://create.hanc.cc/vbot/docs/extensiondevelop.html">
+  <!-- Alternative links -->
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css">
+  <!-- endbuild -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css">
+  <!-- RSS -->
+  <link rel="alternate" href="/atom.xml" title="HanSon's 创作空间">
+  <!-- Open Graph -->
+  <meta name="description" content="在学习扩展开发前，请确保你已经对 Vbot 了如指掌，并且对扩展有了一定的认识。 开发一个属于自己的扩展！接下来以开发一个 Hello-World 扩展为例 功能为 收到 hello 时 回复 world 若水平不错可直接跳过前面步骤，直接看 撸码 Github 创建项目 git clone然后按步骤去初始化 git 和 composer  最终composer.json 可参考 https://">
+<meta property="og:type" content="website">
+<meta property="og:title" content="扩展开发">
+<meta property="og:url" content="http://create.hanc.cc/vbot/docs/extensiondevelop.html">
+<meta property="og:site_name" content="HanSon&#39;s 创作空间">
+<meta property="og:description" content="在学习扩展开发前，请确保你已经对 Vbot 了如指掌，并且对扩展有了一定的认识。 开发一个属于自己的扩展！接下来以开发一个 Hello-World 扩展为例 功能为 收到 hello 时 回复 world 若水平不错可直接跳过前面步骤，直接看 撸码 Github 创建项目 git clone然后按步骤去初始化 git 和 composer  最终composer.json 可参考 https://">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/PVACofmfMw.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/bySHbkDz5t.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/emNgO8ji4d.png">
+<meta property="og:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/Bf994ghr2c.png">
+<meta property="og:updated_time" content="2019-05-22T04:02:18.226Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="扩展开发">
+<meta name="twitter:description" content="在学习扩展开发前，请确保你已经对 Vbot 了如指掌，并且对扩展有了一定的认识。 开发一个属于自己的扩展！接下来以开发一个 Hello-World 扩展为例 功能为 收到 hello 时 回复 world 若水平不错可直接跳过前面步骤，直接看 撸码 Github 创建项目 git clone然后按步骤去初始化 git 和 composer  最终composer.json 可参考 https://">
+<meta name="twitter:image" content="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/PVACofmfMw.png">
+<meta property="fb:admins" content="100000247608790">
+  <!-- Google Analytics -->
+  
+  <!-- Github Button -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+
+<body>
+  <div id="container">
+    <header id="header" class="wrapper">
+  <div id="header-inner" class="inner">
+    <h1 id="logo-wrap">
+      <a href="/" id="logo">Hexo</a>
+    </h1>
+    <nav id="main-nav">
+      <a target="_blank" href="/vbot/docs/" class="main-nav-link">文档</a><a target="_blank" href="https://github.com/phpvbot" class="main-nav-link">扩展</a><a target="_blank" href="https://github.com/hanson/vbot" class="main-nav-link">Github</a>
+      <a href="https://github.com/hanson" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+      <div id="search-input-wrap">
+        <div id="search-input-icon">
+          <i class="fa fa-search"></i>
+        </div>
+        <input type="search" id="search-input" placeholder="Search...">
+      </div>
+    </nav>
+    <div id="lang-select-wrap">
+      <label id="lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></label>
+      <select id="lang-select" data-canonical>
+        
+          <option value="en" selected>简体中文</option>
+        
+      </select>
+    </div>
+    <a id="mobile-nav-toggle">
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+      <span class="mobile-nav-toggle-bar"></span>
+    </a>
+  </div>
+</header>
+
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">扩展开发</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/vbot/docs/extensiondevelop.md" class="article-edit-link" title="改进本文"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody">
+                <p>在学习扩展开发前，请确保你已经对 Vbot 了如指掌，并且对扩展有了一定的认识。</p>
+<h2 id="开发一个属于自己的扩展！" class="article-heading"><a href="#开发一个属于自己的扩展！" class="headerlink" title="开发一个属于自己的扩展！"></a>开发一个属于自己的扩展！<a class="article-anchor" href="#开发一个属于自己的扩展！" aria-hidden="true"></a></h2><p>接下来以开发一个 Hello-World 扩展为例</p>
+<p>功能为 收到 hello 时 回复 world</p>
+<p>若水平不错可直接跳过前面步骤，直接看 <a href="extensiondevelop.html#撸码">撸码</a></p>
+<h3 id="Github-创建项目" class="article-heading"><a href="#Github-创建项目" class="headerlink" title="Github 创建项目"></a>Github 创建项目<a class="article-anchor" href="#Github-创建项目" aria-hidden="true"></a></h3><p><img src="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/PVACofmfMw.png" alt="file"></p>
+<h3 id="git-clone" class="article-heading"><a href="#git-clone" class="headerlink" title="git clone"></a>git clone<a class="article-anchor" href="#git-clone" aria-hidden="true"></a></h3><p>然后按步骤去初始化 git 和 composer</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/bySHbkDz5t.png" alt="file"></p>
+<p>最终composer.json 可参考 <a href="https://github.com/phpvbot/guess-number/blob/master/composer.json" target="_blank" rel="noopener">https://github.com/phpvbot/guess-number/blob/master/composer.json</a></p>
+<p>在文件<code>.gitignore</code>中记得排除掉 composer.lock 以及 .idea （如果没有此文件可自行在项目根目录自行创建）</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/emNgO8ji4d.png" alt="file"></p>
+<h3 id="撸码" class="article-heading"><a href="#撸码" class="headerlink" title="撸码"></a>撸码<a class="article-anchor" href="#撸码" aria-hidden="true"></a></h3><p>在项目根目录新建一个 src 文件夹，新建 HelloWorld 的类，并继承 AbstractMessageHandler </p>
+<p>结构如图：</p>
+<p><img src="https://dn-phphub.qbox.me/uploads/images/201706/16/4486/Bf994ghr2c.png" alt="file"></p>
+<h4 id="属性" class="article-heading"><a href="#属性" class="headerlink" title="属性"></a>属性<a class="article-anchor" href="#属性" aria-hidden="true"></a></h4><p>属性都必须填写</p>
+<ul>
+<li>name 扩展的英文名称（多单词以下划线划分）</li>
+<li>zhName 扩展的中文名称</li>
+<li>author 作者名称</li>
+<li>version 版本号，默认为 1.0 （以后需跟随 github release 版本做变动）</li>
+<li><code>public static $status = true;</code> 负责扩展开关（新增加）</li>
+</ul>
+<h4 id="方法" class="article-heading"><a href="#方法" class="headerlink" title="方法"></a>方法<a class="article-anchor" href="#方法" aria-hidden="true"></a></h4><p>扩展提供了两个必须实现的方法</p>
+<ul>
+<li>register 在系统对扩展进行注册时，会执行一遍且仅执行一遍</li>
+<li>handler 如 消息处理器 的setHandler方法一样，传入的是消息数组</li>
+</ul>
+<p>最终实现结果：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">handler</span><span class="params">(Collection $collection)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> ($collection[<span class="string">'type'</span>] === <span class="string">'text'</span> &amp;&amp; $collection[<span class="string">'content'</span>] === <span class="string">'hello'</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (($collection[<span class="string">'fromType'</span>] === <span class="string">'Group'</span> &amp;&amp; $collection[<span class="string">'isAt'</span>]) || $collection[<span class="string">'fromType'</span>] === <span class="string">'Friend'</span>) &#123;</span><br><span class="line">            Text::send($collection[<span class="string">'from'</span>][<span class="string">'UserName'</span>], <span class="string">'world'</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="发布" class="article-heading"><a href="#发布" class="headerlink" title="发布"></a>发布<a class="article-anchor" href="#发布" aria-hidden="true"></a></h3><p>发布只需要提交代码到github并且发布 release 版本，详情可看 <a href="https://laravel-china.org/articles/4982/how-do-i-create-my-own-composer-library" target="_blank" rel="noopener">如何创建一个自己的 Composer 库</a></p>
+<h2 id="加入官方扩展组" class="article-heading"><a href="#加入官方扩展组" class="headerlink" title="加入官方扩展组"></a>加入官方扩展组<a class="article-anchor" href="#加入官方扩展组" aria-hidden="true"></a></h2><p>开发完毕后，可以把机器人拉入 Vbot 体验群 中进行测试，功能测试以及代码检测都过关，可以发邮件到 <a href="mailto:h@hanc.cc" target="_blank" rel="noopener">h@hanc.cc</a> 进行申请，或者 QQ 群上申请均可以。</p>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2019-05-22T04:02:18.226Z" itemprop="dateModified">上次更新：2019-05-22</time>
+                
+              </footer>
+              
+<section id="comments">
+  <div id="disqus_thread"></div>
+</section>
+<script>
+  var disqus_shortname = 'hexojs';
+  var disqus_url = 'http://create.hanc.cc/vbot/docs/extensiondevelop.html';
+  var disqus_title = "扩展开发";
+  var disqus_config = function(){
+    this.language = 'zh';
+  };
+  (function(){
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = 'https://go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">目录</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#开发一个属于自己的扩展！"><span class="toc-text">开发一个属于自己的扩展！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Github-创建项目"><span class="toc-text">Github 创建项目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-clone"><span class="toc-text">git clone</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#撸码"><span class="toc-text">撸码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#属性"><span class="toc-text">属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#方法"><span class="toc-text">方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布"><span class="toc-text">发布</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#加入官方扩展组"><span class="toc-text">加入官方扩展组</span></a></li></ol>
+              <a href="#" id="article-toc-top">回到顶部</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">开始使用</strong><a href="index.html" class="sidebar-link">概述</a><a href="theory.html" class="sidebar-link">原理</a><a href="install.html" class="sidebar-link">安装</a><a href="configuration.html" class="sidebar-link">配置</a><a href="catalog.html" class="sidebar-link">目录</a><a href="run.html" class="sidebar-link">运行</a><strong class="sidebar-title">基本使用</strong><a href="messagehandler.html" class="sidebar-link">消息处理器</a><a href="observer.html" class="sidebar-link">监听器</a><a href="contacts.html" class="sidebar-link">联系人</a><a href="extension.html" class="sidebar-link">扩展</a><strong class="sidebar-title">高级使用</strong><a href="api.html" class="sidebar-link">Swoole API</a><a href="extensiondevelop.html" class="sidebar-link current">扩展开发</a><strong class="sidebar-title">消息</strong><a href="message.html" class="sidebar-link">消息</a><a href="text.html" class="sidebar-link">文本</a><a href="voice.html" class="sidebar-link">语音</a><a href="image.html" class="sidebar-link">图片</a><a href="video.html" class="sidebar-link">视频</a><a href="emoticon.html" class="sidebar-link">表情</a><a href="file.html" class="sidebar-link">文件</a><a href="location.html" class="sidebar-link">位置</a><a href="recall.html" class="sidebar-link">撤回</a><a href="card.html" class="sidebar-link">名片</a><a href="redpacket.html" class="sidebar-link">红包</a><a href="requestfriend.html" class="sidebar-link">好友请求</a><a href="share.html" class="sidebar-link">分享</a><a href="official.html" class="sidebar-link">公众号</a><a href="touch.html" class="sidebar-link">点击</a><a href="transfer.html" class="sidebar-link">转账</a><a href="newfriend.html" class="sidebar-link">新增好友</a><a href="groupchange.html" class="sidebar-link">群组变动</a><a href="mina.html" class="sidebar-link">小程序</a><strong class="sidebar-title">其他</strong><a href="troubleshooting.html" class="sidebar-link">问题解答</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2019 <a href="https://zespia.tw/" target="_blank">Tommy Chen</a><br>
+      Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.
+    </div>
+    <div id="footer-links">
+      <a href="http://weibo.com/" class="footer-link" target="_blank"><i class="fa fa-weibo"></i></a>
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/hanson" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      
+      <li class="mobile-nav-item">
+        <a href="https://github.com/hanson" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>简体中文</span></span>
+    <select id="mobile-lang-select" data-canonical>
+      
+        <option value="en" selected>简体中文</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js"></script>
+<script src="/js/scrollingelement.js"></script>
+<script src="/js/toc.js"></script>
+<script src="/js/mobile_nav.js"></script>
+<!-- endbuild -->
+<script src="https://cdn.jsdelivr.net/retinajs/1.3.0/retina.min.js" async></script>
+
+<!-- Algolia -->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
+<script type="text/javascript">
+document.getElementById('search-input-wrap').classList.add('on');
+docsearch({
+  apiKey: 'c3d5d4c995b5e0c2ffb5623900279a66',
+  indexName: 'hexo',
+  inputSelector: '#search-input'
+});
+</script>
+
+
+</body>
+</html>
