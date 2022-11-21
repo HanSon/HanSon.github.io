@@ -2,6 +2,14 @@ title: 概述
 layout: vbot/page
 ---
 
+{% note warn 使用须知 %}
+vbot 基于web协议，使用上不稳定，不建议用作商业化项目。
+
+如需用作商业化，请看 https://www.apifox.cn/apidoc/shared-71b9855b-693c-48fc-858b-cde2c5afe5a8/doc-1674150
+
+或直接加微信 hansonskr
+{% endnote %}
+
 欢迎使用 Vbot，本文档将帮助你快速上手。如果你在使用过程中遇到问题，请查看 [问题解答](troubleshooting.html) 中的解答，或者在 [GitHub](https://github.com/hanson/vbot/issues) 上提问。
 
 ## 什么是 Vbot？
@@ -17,20 +25,6 @@ Vbot 是一个基于 web 的 php 7 微信机器人。你还可以通过开启 Sw
 - 数据统计
 
 等等
-
-## 加入我们
-
-<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=299c1cf53a21a6a699449c00e29ab0142e7d402726e46f174e6e31940e95242e"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Vbot交流群" title="Vbot交流群"></a>
-
-QQ群号：492548647 
-
-{% note warn 进群须知 %}
-为了保证进群用户都清楚知道文档链接，故此把 QQ 群放在文档位置，加群需要缴纳 1 元群费，望理解。
-
-为了珍惜自己与他人的时间，提问前请确保已认真阅读全部文档。
-
-开始之前请确保你已掌握基础的 PHP 技能，如果连基础的 composer 等知识都不会，建议你学会了再来。
-{% endnote %}
 
 如果需要给 Vbot 提 PR，可提交到 dev 分支。
 
